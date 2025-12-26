@@ -33,25 +33,25 @@ User → Nginx Reverse Proxy (EC2) → Backend EC2 (Apache + PHP) → AWS RDS (M
 
 ---
 
-## Screenshots
+### Architecture Diagram
 
-Create a folder named `screenshots` in the project and place relevant screenshots.
+![Architecture](screenshots/architecture.png)
 
-* Architecture Diagram
-  `screenshots/architecture.png`
+### Backend EC2 Server
 
+![Backend EC2](screenshots/backend-ec2.png)
 
-* Backend EC2 Server
-  `screenshots/backend-ec2.png`
+### Student Registration Form
 
-* Student Registration Form
-  `screenshots/student.form.png`
+![Student Form](screenshots/student-form.png)
 
-* Data Stored in Database
-  `screenshots/db-data.png`
+### Data Stored in Database
 
-* Reverse Proxy Working
-  `screenshots/proxy-working.png`
+![Database Data](screenshots/db-data.png)
+
+### Reverse Proxy Working
+
+![Proxy Working](screenshots/proxy-working.png)
 
 ---
 
@@ -61,7 +61,7 @@ Create a folder named `screenshots` in the project and place relevant screenshot
 
 1. Create an RDS MySQL instance
 2. Enable public access (only for learning/testing)
-3. Allow inbound port 3306 in security group
+3. Allow inbound port `3306` in the security group
 4. Note down the RDS endpoint
 
 Create the database and table:
@@ -106,7 +106,7 @@ sudo dnf install mariadb -y
 mysql -h <rds-endpoint> -u admin -p
 ```
 
-Verify data using:
+Verify data:
 
 ```
 SELECT * FROM students;
@@ -136,7 +136,7 @@ Restart nginx:
 sudo systemctl restart nginx
 ```
 
-Access the application via proxy server public IP.
+Access the application using the proxy server public IP.
 
 ---
 
@@ -145,7 +145,7 @@ Access the application via proxy server public IP.
 1. Open the proxy EC2 public IP in a browser
 2. Fill out the registration form
 3. Submit the form
-4. Verify the data in the database using MySQL client
+4. Verify data in the database using MySQL client
 
 ---
 
@@ -158,23 +158,9 @@ For production environments:
 * Use private subnets and proper networking
 * Restrict security groups
 * Configure HTTPS
-* Use secrets manager instead of hardcoding credentials
+* Use AWS Secrets Manager instead of hardcoding credentials
 
 ---
 
-## Possible Enhancements
 
-* SSL using Let’s Encrypt
-* Custom domain integration
-* Input validation and error handling
-* Authentication and login system
-* Deployment using Docker
-* Infrastructure automation using Terraform
 
----
-
-## About
-
-This project was implemented as a hands-on learning exercise to understand AWS services, networking flow, server configuration, and end-to-end application deployment.
-
-If you want, I can also help refine content, improve structure, or prepare this for a resume or portfolio.
