@@ -35,7 +35,7 @@ User → Nginx Reverse Proxy (EC2) → Backend EC2 (Apache + PHP) → AWS RDS (M
 
 ### Architecture Diagram
 
-![Architecture](screenshots/architecture.png)
+![](./screenshots/architecture.png)
 
 ### Backend EC2 Server
 
