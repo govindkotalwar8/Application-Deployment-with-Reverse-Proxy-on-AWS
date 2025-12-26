@@ -159,8 +159,3 @@ For production environments:
 * Restrict security groups
 * Configure HTTPS
 * Use AWS Secrets Manager instead of hardcoding credentials
-
----
-
-
-
