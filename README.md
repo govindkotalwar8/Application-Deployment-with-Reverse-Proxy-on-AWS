@@ -43,7 +43,7 @@ User → Nginx Reverse Proxy (EC2) → Backend EC2 (Apache + PHP) → AWS RDS (M
 
 ### Student Registration Form
 
-![Student Form](screenshots/student-form.png)
+![Student Form](screenshots/student.form.png)
 
 ### Data Stored in Database
 
